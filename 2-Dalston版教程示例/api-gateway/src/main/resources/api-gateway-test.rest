@@ -1,0 +1,13 @@
+### 有过滤器，需要加参数?accessToken=true
+GET http://localhost:1101/eureka-client/dc
+
+###
+GET http://localhost:1101/eureka-consumer/consumer?accessToken=true
+
+###
+GET http://localhost:1101/api-a/dc
+
+###
+GET http://localhost:1101/api-a/dc?accessToken=true
+
+###

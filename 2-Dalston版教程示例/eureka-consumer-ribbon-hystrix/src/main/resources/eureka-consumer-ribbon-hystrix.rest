@@ -1,0 +1,6 @@
+GET  http://localhost:2101/consumer
+
+###
+GET  http://localhost:2101/consumer2
+
+###

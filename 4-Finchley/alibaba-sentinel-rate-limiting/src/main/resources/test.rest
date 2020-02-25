@@ -1,0 +1,9 @@
+# curl -i http://httpbin.org/ip
+GET http://localhost:8002/hello
+
+###
+
+GET http://localhost:8002/hello
+Accept: application/json
+
+###
