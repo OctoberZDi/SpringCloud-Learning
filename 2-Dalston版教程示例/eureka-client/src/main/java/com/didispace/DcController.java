@@ -18,10 +18,12 @@ public class DcController {
     DiscoveryClient discoveryClient;
 
     @GetMapping("/dc")
-    public String dc() {
+    public String dc() throws InterruptedException {
+        // 用于服务消费者触发服务降级逻辑的测试代码
+        //Thread.sleep(5000);
+
         String services = "Services: " + discoveryClient.getServices();
         System.out.println(services);
         return services;
     }
-
 }

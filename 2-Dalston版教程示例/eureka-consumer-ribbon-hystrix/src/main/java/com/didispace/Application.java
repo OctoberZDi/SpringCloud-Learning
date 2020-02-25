@@ -9,19 +9,19 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@EnableCircuitBreaker
+@EnableCircuitBreaker//开启短路器功能
 @EnableDiscoveryClient
 @SpringBootApplication
 public class Application {
 
-	@Bean
-	@LoadBalanced
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(true).run(args);
-	}
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(Application.class).web(true).run(args);
+    }
 
 }

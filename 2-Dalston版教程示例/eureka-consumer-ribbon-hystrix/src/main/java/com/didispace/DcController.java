@@ -25,21 +25,9 @@ public class DcController {
         return consumerService.consumer();
     }
 
-    @Service
-    class ConsumerService {
-
-        @Autowired
-        RestTemplate restTemplate;
-
-        @HystrixCommand(fallbackMethod = "fallback")
-        public String consumer() {
-            return restTemplate.getForObject("http://eureka-client/dc", String.class);
-        }
-
-        public String fallback() {
-            return "fallbck";
-        }
-
+    @GetMapping("/consumer2")
+    public String dc2() {
+        return consumerService.testException();
     }
 
 }

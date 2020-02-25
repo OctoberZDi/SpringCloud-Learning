@@ -1,0 +1,6 @@
+GET http://localhost:1101/api-a/hello
+
+###
+GET http://localhost:1101/api-a/hello&accessToken=token
+
+###
